@@ -3,13 +3,14 @@ import herobackgroundimage from "../../public/herobackgroundimage.svg";
 import github from "../../public/github.svg";
 import Link from "next/link";
 import dashboard from "../../public/dashboardoverview.svg";
+import gradient from "../../public/gradient.svg";
 
 export default function Hero() {
   return (
     <section>
       <div
         id="home"
-        className="relative mx-auto w-full max-w-screen-sm lg:max-w-6xl px-4 lg:px-8 pb-10 lg:pb-16 pt-6 lg:pt-12 scroll-mt-[120px]"
+        className="relative mx-auto w-full max-w-screen-sm lg:max-w-6xl px-4 lg:px-8 pb-10  lg:pb- pt-6 lg:pt-12 scroll-mt-[120px]"
       >
         <Image
           src={herobackgroundimage}
@@ -55,8 +56,14 @@ export default function Hero() {
       </div>
       <div className="mt-[120px] lg:mt-[-200px] lg:absolute lg:w-[80%] lg:flex lg:justify-center lg:items-center lg:mx-[10%]">
         <Image src={dashboard} alt="dashboard overview" className="lg:w-full"/>
-        <div className="hidden lg:block absolute bottom-[-225px] left-0 w-full h-[225px] bg-gradient-to-b from-[#FFFFFF] to-[#EFF6FF] blur-[124px]"></div>
       </div>
+      
+    
+
+      <Image src={gradient} alt="gradient" className="hidden lg:block absolute bottom-[-750px] w-full"/>
+
+
+
     </section>
   );
 }

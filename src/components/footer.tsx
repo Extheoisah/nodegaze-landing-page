@@ -12,7 +12,7 @@ export default function Footer() {
           <Image src={logo} alt="Nodegaze" className="lg:w-[210px]"/>
         </div>
 
-        <nav className="mt-[28px] lg:mt-[50px] flex flex-col lg:flex-row items-center gap-[18px]">
+        <nav className="mt-[28px] lg:mt-[50px] flex flex-col lg:flex-row items-center gap-[18px] lg:gap-[100px]">
           <Link href="#home" className="text-white text-[20px] lg:text-[25px]">Home</Link>
           <Link href="#product" className="text-white text-[20px] lg:text-[25px]">The Product</Link>
           <Link href="#contributors" className="text-white text-[20px] lg:text-[25px]">Contributors</Link>

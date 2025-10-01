@@ -1,23 +1,3 @@
-// import './globals.css'
-
-// export const metadata = {
-//   title: 'Nodegaze Landing Page',
-//   description: 'Nodegaze mobile landing page built with Next.js and Tailwind',
-// }
-
-// export default function RootLayout({
-//   children,
-// }: {
-//   children: React.ReactNode
-// }) {
-//   return (
-//     <html lang="en">
-//       <body>{children}</body>
-//     </html>
-//   )
-// }
-
-
 import './globals.css'
 
 export const metadata = {

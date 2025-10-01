@@ -19,49 +19,107 @@ const NAV_ITEMS: NavItem[] = [
 ];
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [activeSection, setActiveSection] = useState<string>("home");
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    // Prevent body scroll when mobile menu is open
+    document.body.style.overflow = isOpen ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const ids = NAV_ITEMS.map((it) => it.href.replace("#", ""));
+
+    const observerCallback: IntersectionObserverCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observerOptions: IntersectionObserverInit = {
+      root: null,
+      rootMargin: "-40% 0px -40% 0px",
+      threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    ids.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    // Initialize from hash (if user visits with #product for example)
+    const hashId = window.location.hash.replace("#", "") || "home";
+    const initialEl = document.getElementById(hashId);
+    if (initialEl) setActiveSection(initialEl.id);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  // helper: get id from href (#home -> home)
+  const idFromHref = (href: string) => href.replace("#", "");
+
   return (
     <>
       <header className="fixed top-[50px] z-40 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 w-full px-[20px] lg:px-[40px]">
-        <div className="rounded-[50px] border-[#b0b4b8] border-[1px] lg:h-[100px] lg:flex lg:items-center lg:justify-between lg:w-full">
+        <div className="rounded-[50px] border border-[#b0b4b8] lg:h-[100px] lg:flex lg:items-center lg:justify-between lg:w-full">
+          {/* Mobile header */}
           <div className="mx-auto lg:hidden flex h-16 w-full max-w-screen-sm items-center justify-between px-4">
             <a
               href="#home"
-              className="inline-flex items-center gap-2"
               aria-label="Nodegaze home"
+              onClick={() => setActiveSection("home")}
+              className="inline-flex items-center gap-2"
             >
-              <Image src={logo} alt="logo" className="lg:w-[200px]"/>
+              <Image src={logo} alt="logo" className="lg:w-[200px]" />
             </a>
-            <Image onClick={() => setIsOpen(true)} src={menu} alt="menu" className="lg:hidden"/>
+            <Image
+              onClick={() => setIsOpen(true)}
+              src={menu}
+              alt="menu"
+              className="lg:hidden cursor-pointer"
+            />
           </div>
 
+          {/* Desktop nav */}
           <div className="hidden lg:flex w-full items-center justify-between px-[50px]">
-            <a href="#home" className="inline-flex items-center gap-2" aria-label="Nodegaze home">
-              <Image src={logo} alt="logo" className="w-[250px]"/>
+            <a
+              href="#home"
+              aria-label="Nodegaze home"
+              onClick={() => setActiveSection("home")}
+              className="inline-flex items-center gap-2"
+            >
+              <Image src={logo} alt="logo" className="w-[250px]" />
             </a>
 
             <nav className="flex items-center gap-[100px]">
-              {NAV_ITEMS.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className={`text-[28px] lg:font-[700] tracking-tight ${item.label === "Home" ? "text-[#2151f5] font-[700]" : "text-[#1f2a44]"}`}
-                >
-                  {item.label}
-                </a>
-              ))}
+              {NAV_ITEMS.map((item) => {
+                const id = idFromHref(item.href);
+                const isActive = activeSection === id;
+                return (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setActiveSection(id)}
+                    className={`text-[28px] tracking-tight lg:font-[700] transition-colors ${
+                      isActive
+                        ? "text-[#2151f5] font-[700]"
+                        : "text-[#1f2a44]"
+                    }`}
+                  >
+                    {item.label}
+                  </a>
+                );
+              })}
             </nav>
 
             <a
@@ -70,35 +128,46 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="inline-flex h-16 items-center justify-center gap-2 rounded-full bg-[#2151f5] px-6 text-white active:translate-y-[2px] active:shadow-[0_4px_0_#1737a5]"
             >
-              <Image src={github} alt="github"  className="w-[35px]"/>
+              <Image src={github} alt="github" className="w-[35px]" />
               <span className="text-[25px] font-semibold">Check Github</span>
             </a>
           </div>
         </div>
       </header>
 
-      {isOpen ? (
-        <div className="fixed h-[50%] inset-0 z-50 bg-black/60">
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="fixed inset-0 z-50 bg-black/60">
           <div className="absolute inset-0 bg-white">
             <div className="mx-auto flex h-16 w-full max-w-screen-sm items-center justify-end px-4">
               <Image
                 onClick={() => setIsOpen(false)}
                 src={cancel}
                 alt="cancel"
+                className="cursor-pointer"
               />
             </div>
 
             <nav className="mx-auto flex max-w-screen-sm flex-col items-center gap-10 px-4 pt-8">
-              {NAV_ITEMS.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-[20px] font-medium tracking-tight text-[#1f2a44]"
-                >
-                  {item.label}
-                </a>
-              ))}
+              {NAV_ITEMS.map((item) => {
+                const id = idFromHref(item.href);
+                const isActive = activeSection === id;
+                return (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => {
+                      setIsOpen(false);
+                      setActiveSection(id);
+                    }}
+                    className={`text-[20px] font-medium tracking-tight transition-colors ${
+                      isActive ? "text-[#2151f5]" : "text-[#1f2a44]"
+                    }`}
+                  >
+                    {item.label}
+                  </a>
+                );
+              })}
 
               <a
                 href="https://github.com"
@@ -112,7 +181,7 @@ export default function Navbar() {
             </nav>
           </div>
         </div>
-      ) : null}
+      )}
     </>
   );
 }
