@@ -23,7 +23,6 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState<string>("home");
 
   useEffect(() => {
-    // Prevent body scroll when mobile menu is open
     document.body.style.overflow = isOpen ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
@@ -71,8 +70,7 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed top-[50px] z-40 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 w-full px-[20px] lg:px-[40px]">
-        <div className="rounded-[50px] border border-[#b0b4b8] lg:h-[100px] lg:flex lg:items-center lg:justify-between lg:w-full">
-          {/* Mobile header */}
+        <div className="rounded-[50px] border border-[#b0b4b8] lg:h-[80px] lg:flex lg:items-center lg:justify-between lg:w-full">
           <div className="mx-auto lg:hidden flex h-16 w-full max-w-screen-sm items-center justify-between px-4">
             <a
               href="#home"
@@ -80,7 +78,7 @@ export default function Navbar() {
               onClick={() => setActiveSection("home")}
               className="inline-flex items-center gap-2"
             >
-              <Image src={logo} alt="logo" className="lg:w-[200px]" />
+              <Image src={logo} alt="logo" className="lg:w-[100px]" />
             </a>
             <Image
               onClick={() => setIsOpen(true)}
@@ -90,7 +88,6 @@ export default function Navbar() {
             />
           </div>
 
-          {/* Desktop nav */}
           <div className="hidden lg:flex w-full items-center justify-between px-[50px]">
             <a
               href="#home"
@@ -98,7 +95,7 @@ export default function Navbar() {
               onClick={() => setActiveSection("home")}
               className="inline-flex items-center gap-2"
             >
-              <Image src={logo} alt="logo" className="w-[250px]" />
+              <Image src={logo} alt="logo" className="w-[150px]" />
             </a>
 
             <nav className="flex items-center gap-[100px]">
@@ -110,7 +107,7 @@ export default function Navbar() {
                     key={item.label}
                     href={item.href}
                     onClick={() => setActiveSection(id)}
-                    className={`text-[28px] tracking-tight lg:font-[700] transition-colors ${
+                    className={`text-[24px] tracking-tight lg:font-[700] transition-colors ${
                       isActive
                         ? "text-[#2151f5] font-[700]"
                         : "text-[#1f2a44]"
@@ -123,13 +120,13 @@ export default function Navbar() {
             </nav>
 
             <a
-              href="https://github.com"
+              href="https://github.com/extheoisah/nodegaze"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-16 items-center justify-center gap-2 rounded-full bg-[#2151f5] px-6 text-white active:translate-y-[2px] active:shadow-[0_4px_0_#1737a5]"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#2151f5] px-6 text-white active:translate-y-[2px] active:shadow-[0_4px_0_#1737a5]"
             >
-              <Image src={github} alt="github" className="w-[35px]" />
-              <span className="text-[25px] font-semibold">Check Github</span>
+              <Image src={github} alt="github" className="w-[25px]" />
+              <span className="text-[20px] font-semibold">Check Github</span>
             </a>
           </div>
         </div>
@@ -170,7 +167,7 @@ export default function Navbar() {
               })}
 
               <a
-                href="https://github.com"
+                href="https://github.com/extheoisah/nodegaze"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#2151f5] px-6 text-white active:translate-y-[2px] active:shadow-[0_4px_0_#1737a5]"

@@ -2,7 +2,7 @@ import './globals.css'
 
 export const metadata = {
   title: 'Nodegaze Landing Page',
-  description: 'Nodegaze mobile landing page built with Next.js and Tailwind',
+  description: 'Nodegaze landing page built with Next.js and Tailwind',
 }
 
 export default function RootLayout({

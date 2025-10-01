@@ -39,17 +39,17 @@ export default function Hero() {
             <p className="mb-6 text-[13.5px] lg:text-[24px] font-[500] text-[#3D3D3D] text-center lg:max-w-[95%] lg:mx-auto lg:tracking-[0.01em]">
               A powerful open-source observability tool for Lightning nodes.
               Monitor performance, track liquidity, and gain real-time insights
-              across LND, Core Lightning, and Eclair — all in one dashboard.
+              across LND, Core Lightning, and Eclair all in one dashboard.
             </p>
 
             <Link
-              href="https://github.com"
+              href="https://github.com/extheoisah/nodegaze"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-12 lg:h-[64px] items-center justify-center gap-2 rounded-full bg-[#2151f5] px-6 lg:px-4 text-white active:translate-y-[2px] active:shadow-[0_4px_0_#1737a5] w-[200px] lg:w-[260px] lg:mt-[30px] self-center"
+              className="inline-flex h-12 lg:h-[64px] items-center justify-center gap-2 rounded-full bg-[#2151f5] px-6 lg:px-4 text-white active:translate-y-[2px] active:shadow-[0_4px_0_#1737a5] w-[200px] lg:w-[220px] lg:mt-[30px] self-center"
             >
-              <Image src={github} alt="github" className="lg:w-[35px]"/>
-              <span className="text-[15px] lg:text-[25px] font-semibold">Check Github</span>
+              <Image src={github} alt="github" className="lg:w-[25px]"/>
+              <span className="text-[15px] lg:text-[23px] font-semibold">Check Github</span>
             </Link>
           </div>
         </div>

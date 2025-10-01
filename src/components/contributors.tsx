@@ -19,8 +19,8 @@ type Contributor = {
 
 const CONTRIBUTORS: Contributor[] = [
   { name: "Theophilus Isah", role: "Contributor", avatar: theo },
-  { name: "CamilIahri", role: "Contributor", avatar: cam },
-  { name: "rully0x", role: "Contributor", avatar: nully },
+  { name: "Camillarhi", role: "Contributor", avatar: cam },
+  { name: "nully0x", role: "Contributor", avatar: nully },
   { name: "Afolabi Oluwatobiloba", role: "Contributor", avatar: tobi },
   { name: "Umolo Blessing", role: "Contributor", avatar: blessing },
   { name: "Busayo Dada", role: "Contributor", avatar: busayo },
