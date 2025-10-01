@@ -54,13 +54,13 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="mt-[120px] lg:mt-[-200px] lg:absolute lg:w-[80%] lg:flex lg:justify-center lg:items-center lg:mx-[10%]">
+      <div className="mt-[120px] lg:mt-[-400px] lg:absolute lg:w-[80%] lg:flex lg:justify-center lg:items-center lg:mx-[10%]">
         <Image src={dashboard} alt="dashboard overview" className="lg:w-full"/>
       </div>
       
     
 
-      <Image src={gradient} alt="gradient" className="hidden lg:block absolute bottom-[-750px] w-full"/>
+      <Image src={gradient} alt="gradient" className="hidden lg:block absolute bottom-[-650px] w-full"/>
 
 
 
