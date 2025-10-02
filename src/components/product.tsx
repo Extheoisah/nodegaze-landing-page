@@ -8,7 +8,7 @@ export default function Product() {
   return (
     <section
       id="product"
-      className="px-[20px] mt-[50px] scroll-mt-[120px] lg:scroll-mt-[10px] lg:mt-[35%] lg:w-screen lg:px-[5%] bg-[#FFFFFF]"
+      className="px-[20px] mt-[50px] scroll-mt-[120px] lg:scroll-mt-[10px] lg:mt-[25%] lg:w-screen lg:px-[5%] bg-[#FFFFFF]"
     >
       <p className="text-[40px] lg:text-[72px] font-[500px] lg:font-[600] text-[#101928] lg:pt-[10%]">
         The Product

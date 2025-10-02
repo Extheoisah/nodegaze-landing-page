@@ -10,7 +10,7 @@ export default function Hero() {
     <section>
       <div
         id="home"
-        className="relative mx-auto w-full max-w-screen-sm lg:max-w-[1440px] px-4 lg:px-8 pb-10 pt-6 lg:pt-12 scroll-mt-[120px] "
+        className="relative mx-auto w-full max-w-screen-sm lg:max-w-[1200px] px-4 lg:px-8 pb-10 pt-6 lg:pt-12 scroll-mt-[120px] "
       >
         <Image
           src={herobackgroundimage}
@@ -19,8 +19,8 @@ export default function Hero() {
           priority
         />
 
-        <div className=" p-4 absolute top-0 left-0 lg:left-[100px] w-full lg:w-[100%] h-full mt-[125px] lg:mt-[160px] font-sans">
-          <h1 className="mb-3 text-[40px] text-center font-[500] text-[#101928] lg:text-[75px] lg:leading-[96px] lg:font-[600] lg:w-full lg:tracking-[0.02em]">
+        <div className=" p-4 absolute top-0 left-0 md:left-[10%] 2xl:left-[20%] w-full lg:mx-auto h-full mt-[125px] lg:mt-[160px] font-sans">
+          <h1 className="mb-3 text-[40px] text-center font-[500] text-[#101928] lg:text-[70px] lg:leading-[96px] lg:w-full lg:tracking-[0.02em]">
             See your Lightning
             <span className="hidden lg:inline"> </span>
             <br className="lg:hidden" />
@@ -35,8 +35,8 @@ export default function Hero() {
           </h1>
 
 
-          <div className="flex flex-col justify-center w-full lg:mt-[50px] lg:w-[]">
-            <p className="mb-6 text-[13.5px] lg:text-[24px] font-[500] text-[#3D3D3D] text-center lg:max-w-[85%] lg:mx-auto lg:tracking-[0.01em]">
+          <div className="flex flex-col justify-center w-full lg:mt-[50px] lg:mx-auto">
+            <p className="mb-6 text-[13.5px] lg:text-[21px] font-[400] text-[#3D3D3D] text-center lg:max-w-[85%] lg:mx-auto lg:tracking-[0.01em]">
               A powerful open-source observability tool for Lightning nodes.
               Monitor performance, track liquidity, and gain real-time insights
               across LND, Core Lightning, and Eclair all in one dashboard.
@@ -60,7 +60,7 @@ export default function Hero() {
       
     
 
-      <Image src={gradient} alt="gradient" className="hidden lg:block absolute bottom-[-650px] w-full"/>
+      <Image src={gradient} alt="gradient" className="hidden lg:block absolute md:bottom-[-480px] 2xl:bottom-[-530px] w-full"/>
 
 
 

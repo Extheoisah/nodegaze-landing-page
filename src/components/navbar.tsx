@@ -88,7 +88,7 @@ export default function Navbar() {
             />
           </div>
 
-          <div className="hidden lg:flex w-full items-center justify-between px-[50px]">
+          <div className="hidden lg:flex w-full items-center justify-between px-[30px]">
             <a
               href="#home"
               aria-label="Nodegaze home"
@@ -98,7 +98,7 @@ export default function Navbar() {
               <Image src={logo} alt="logo" className="w-[150px]" />
             </a>
 
-            <nav className="flex items-center gap-[100px]">
+            <nav className="flex items-center gap-[50px]">
               {NAV_ITEMS.map((item) => {
                 const id = idFromHref(item.href);
                 const isActive = activeSection === id;
@@ -107,7 +107,7 @@ export default function Navbar() {
                     key={item.label}
                     href={item.href}
                     onClick={() => setActiveSection(id)}
-                    className={`text-[24px] tracking-tight lg:font-[700] transition-colors ${
+                    className={`text-[18px] tracking-tight lg:font-[700] transition-colors ${
                       isActive
                         ? "text-[#2151f5] font-[700]"
                         : "text-[#1f2a44]"
@@ -125,8 +125,8 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#2151f5] px-6 text-white active:translate-y-[2px] active:shadow-[0_4px_0_#1737a5]"
             >
-              <Image src={github} alt="github" className="w-[25px]" />
-              <span className="text-[20px] font-semibold">Check Github</span>
+              <Image src={github} alt="github" className="w-[20px] h-[20px]" />
+              <span className="text-[16px] font-semibold">Check Github</span>
             </a>
           </div>
         </div>
