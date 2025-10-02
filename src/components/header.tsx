@@ -19,8 +19,8 @@ export default function Hero() {
           priority
         />
 
-        <div className=" p-4 absolute top-0 left-0 md:left-[10%] 2xl:left-[20%] w-full lg:mx-auto h-full mt-[125px] lg:mt-[160px] font-sans">
-          <h1 className="mb-3 text-[40px] text-center font-[500] text-[#101928] lg:text-[70px] lg:leading-[96px] lg:w-full lg:tracking-[0.02em]">
+        <div className=" p-4 absolute top-0 left-0 md:left-[13%] 2xl:left-[22.5%] w-full lg:mx-auto h-full mt-[125px] lg:mt-[160px] font-sans">
+          <h1 className="mb-3 text-[40px] text-center font-[500] text-[#101928] md:text-[60px] 2xl:text-[65px] lg:leading-[96px] lg:w-[90%] lg:tracking-[0.02em]">
             See your Lightning
             <span className="hidden lg:inline"> </span>
             <br className="lg:hidden" />
@@ -54,13 +54,13 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="mt-[120px] lg:mt-[-400px] lg:absolute lg:w-[80%] lg:flex lg:justify-center lg:items-center lg:mx-[10%]">
+      <div className="mt-[120px] lg:mt-[-425px] lg:absolute lg:w-[80%] lg:flex lg:justify-center lg:items-center lg:mx-[10%]">
         <Image src={dashboard} alt="dashboard overview" className="w-full lg:w-full"/>
       </div>
       
     
 
-      <Image src={gradient} alt="gradient" className="hidden lg:block absolute md:bottom-[-480px] 2xl:bottom-[-530px] w-full"/>
+      <Image src={gradient} alt="gradient" className="hidden lg:block absolute md:bottom-[-500px] 2xl:bottom-[px] w-full"/>
 
 
 
