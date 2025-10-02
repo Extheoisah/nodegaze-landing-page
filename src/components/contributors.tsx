@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import bg from "../../public/contributorbackground.svg";
-import dsbg from "../../public/desktophexagon.svg"
+import dsbg from "../../public/desktophexagon.svg";
 import theo from "../../public/theo.svg";
 import cam from "../../public/cam.svg";
 import nully from "../../public/nully.svg";
@@ -10,33 +10,88 @@ import busayo from "../../public/busayo.svg";
 import chuks from "../../public/chuks.svg";
 import xlogo from "../../public/xlogo.svg";
 import github from "../../public/github2.svg";
+import Link from "next/link";
 
 type Contributor = {
   name: string;
   role: string;
   avatar: StaticImageData;
+  xlink: string;
+  githublink: string;
 };
 
 const CONTRIBUTORS: Contributor[] = [
-  { name: "Theophilus Isah", role: "Contributor", avatar: theo },
-  { name: "Camillarhi", role: "Contributor", avatar: cam },
-  { name: "nully0x", role: "Contributor", avatar: nully },
-  { name: "Afolabi Oluwatobiloba", role: "Contributor", avatar: tobi },
-  { name: "Umolo Blessing", role: "Contributor", avatar: blessing },
-  { name: "Busayo Dada", role: "Contributor", avatar: busayo },
-  { name: "Chuks Agbakuru", role: "Contributor", avatar: chuks },
+  {
+    name: "Theophilus Isah",
+    role: "Contributor",
+    avatar: theo,
+    xlink: "https://x.com/extheo",
+    githublink: "https://github.com/extheoisah",
+  },
+  {
+    name: "Camillarhi",
+    role: "Contributor",
+    avatar: cam,
+    xlink: "https://x.com/Camilla_rhi",
+    githublink: "https://github.com/Camillarhi",
+  },
+  {
+    name: "nully0x",
+    role: "Contributor",
+    avatar: nully,
+    xlink: "https://x.com/nully0x",
+    githublink: "https://github.com/nully0x",
+  },
+  {
+    name: "Afolabi Oluwatobiloba",
+    role: "Contributor",
+    avatar: tobi,
+    xlink: "https://github.com/tobi-afolabi",
+    githublink: "https://github.com/tobi-afolabi",
+  },
+  {
+    name: "Umolo Blessing",
+    role: "Contributor",
+    avatar: blessing,
+    xlink: "https://x.com/umolo_johnson",
+    githublink: "https://github.com/UmoloBlessing",
+  },
+  {
+    name: "Busayo Dada",
+    role: "Contributor",
+    avatar: busayo,
+    xlink: "https://github.com/busayodada",
+    githublink: "https://github.com/busayodada",
+  },
+  {
+    name: "Chuks Agbakuru",
+    role: "Contributor",
+    avatar: chuks,
+    xlink: "https://github.com/chuksagbakuru",
+    githublink: "https://github.com/chuksagbakuru",
+  },
 ];
 
 export default function Contributors() {
   return (
-    <section id="contributors" className="relative mt-[60px] px-[20px] py-[40px] overflow-hidden scroll-mt-[120px] lg:mt-[5%] lg:px-[5%]">
+    <section
+      id="contributors"
+      className="relative mt-[60px] px-[20px] py-[40px] overflow-hidden scroll-mt-[120px] lg:mt-[5%] lg:px-[5%] lg:w-screen"
+    >
       <div className="pointer-events-none select-none absolute left-1/2 top-0 -translate-x-1/2 w-full">
-        <Image src={bg} alt="background grid" className="lg:hidden" priority />
-        <Image src={dsbg} alt="background" priority className="lg:w-full"/>
+        <Image
+          src={bg}
+          alt="background grid"
+          className="w-full h-full lg:hidden"
+          priority
+        />
+        <Image src={dsbg} alt="background" priority className="lg:w-full" />
       </div>
 
       <div className="relative">
-        <p className="text-[40px] font-[500] text-[#101928] lg:text-[72px] lg:font-[600]">Contributors</p>
+        <p className="text-[40px] font-[500] text-[#101928] lg:text-[72px] lg:font-[600]">
+          Contributors
+        </p>
         <p className="text-[14px] font-[400] text-[#3D3D3D] mt-[8px] lg:text-[20px]">
           The magic fingers behind Nodegaze.
         </p>
@@ -49,7 +104,13 @@ export default function Contributors() {
             >
               <div className="flex flex-col items-center text-center">
                 <div className="h-[64px] w-[64px] lg:w-[128px] lg:h-[128px] rounded-full overflow-hidden">
-                  <Image src={person.avatar} alt={person.name} width={64} height={64} className="lg:w-[128px] lg:h-[128px]" />
+                  <Image
+                    src={person.avatar}
+                    alt={person.name}
+                    width={64}
+                    height={64}
+                    className="lg:w-[128px] lg:h-[128px]"
+                  />
                 </div>
                 <p className="mt-[10px] text-[12px] lg:text-[20px] font-[500] text-[#0F172A] leading-[16px]">
                   {person.name}
@@ -58,8 +119,32 @@ export default function Contributors() {
                   {person.role}
                 </p>
                 <div className="mt-[8px] flex items-center gap-[6px]">
-                  <Image src={xlogo} alt="x" width={29} height={28} className="lg:w-[40px] g:h-[40px]" />
-                  <Image src={github} alt="github" width={29} height={28} className="lg:w-[40px] g:h-[40px]"/>
+                  <Link
+                    href={person.xlink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src={xlogo}
+                      alt="x"
+                      width={29}
+                      height={28}
+                      className="lg:w-[40px] lg:h-[40px]"
+                    />
+                  </Link>
+                  <Link
+                    href={person.githublink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src={github}
+                      alt="github"
+                      width={29}
+                      height={28}
+                      className="lg:w-[40px] lg:h-[40px]"
+                    />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -69,5 +154,3 @@ export default function Contributors() {
     </section>
   );
 }
-
-

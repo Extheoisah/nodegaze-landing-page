@@ -69,7 +69,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed top-[50px] z-40 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 w-full px-[20px] lg:px-[40px]">
+      <header className="fixed top-[50px] z-40 bg-white/20 backdrop-blur supports-[backdrop-filter]:bg-white/20 w-full px-[20px] lg:px-[40px]">
         <div className="rounded-[50px] border border-[#b0b4b8] lg:h-[80px] lg:flex lg:items-center lg:justify-between lg:w-full">
           <div className="mx-auto lg:hidden flex h-16 w-full max-w-screen-sm items-center justify-between px-4">
             <a

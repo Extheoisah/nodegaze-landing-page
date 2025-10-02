@@ -10,16 +10,16 @@ export default function Hero() {
     <section>
       <div
         id="home"
-        className="relative mx-auto w-full max-w-screen-sm lg:max-w-6xl px-4 lg:px-8 pb-10  lg:pb- pt-6 lg:pt-12 scroll-mt-[120px]"
+        className="relative mx-auto w-full max-w-screen-sm lg:max-w-[1440px] px-4 lg:px-8 pb-10 pt-6 lg:pt-12 scroll-mt-[120px] "
       >
         <Image
           src={herobackgroundimage}
           alt="heroImage"
-          className="mt-0 h-full w-full lg:w-[900px] lg:mt-[-30px] lg:z-0"
+          className="mt-0 h-full w-full lg:w-[900px] lg:ml-[300px] lg:mt-[-30px] lg:z-0"
           priority
         />
 
-        <div className=" p-4 absolute top-0 left-0 lg:left-[-100px] w-full lg:w-[110%] h-full mt-[125px] lg:mt-[160px] font-sans">
+        <div className=" p-4 absolute top-0 left-0 lg:left-[100px] w-full lg:w-[100%] h-full mt-[125px] lg:mt-[160px] font-sans">
           <h1 className="mb-3 text-[40px] text-center font-[500] text-[#101928] lg:text-[75px] lg:leading-[96px] lg:font-[600] lg:w-full lg:tracking-[0.02em]">
             See your Lightning
             <span className="hidden lg:inline"> </span>
@@ -36,7 +36,7 @@ export default function Hero() {
 
 
           <div className="flex flex-col justify-center w-full lg:mt-[50px] lg:w-[]">
-            <p className="mb-6 text-[13.5px] lg:text-[24px] font-[500] text-[#3D3D3D] text-center lg:max-w-[95%] lg:mx-auto lg:tracking-[0.01em]">
+            <p className="mb-6 text-[13.5px] lg:text-[24px] font-[500] text-[#3D3D3D] text-center lg:max-w-[85%] lg:mx-auto lg:tracking-[0.01em]">
               A powerful open-source observability tool for Lightning nodes.
               Monitor performance, track liquidity, and gain real-time insights
               across LND, Core Lightning, and Eclair all in one dashboard.
@@ -55,7 +55,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="mt-[120px] lg:mt-[-400px] lg:absolute lg:w-[80%] lg:flex lg:justify-center lg:items-center lg:mx-[10%]">
-        <Image src={dashboard} alt="dashboard overview" className="lg:w-full"/>
+        <Image src={dashboard} alt="dashboard overview" className="w-full lg:w-full"/>
       </div>
       
     

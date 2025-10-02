@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="mt-[60px] lg:mt-[0px] bg-black px-[20px] py-[40px]">
+    <footer className="mt-[0px] lg:mt-[0px] bg-black px-[20px] py-[40px] lg:w-screen">
       <div className="flex flex-col items-center text-center lg:mt-[50px] lg:mb-[30px]">
         <div className="flex items-center gap-[8px]">
           <Image src={logo} alt="Nodegaze" className="lg:w-[210px]"/>

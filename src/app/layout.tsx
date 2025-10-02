@@ -1,6 +1,7 @@
 import './globals.css'
+import type { Metadata } from 'next'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Nodegaze Landing Page',
   description: 'Nodegaze landing page built with Next.js and Tailwind',
 }

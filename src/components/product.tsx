@@ -8,7 +8,7 @@ export default function Product() {
   return (
     <section
       id="product"
-      className="px-[20px] mt-[50px] scroll-mt-[120px] lg:scroll-mt-[10px] lg:mt-[30%] lg:px-[5%] bg-[#FFFFFF]"
+      className="px-[20px] mt-[50px] scroll-mt-[120px] lg:scroll-mt-[10px] lg:mt-[35%] lg:w-screen lg:px-[5%] bg-[#FFFFFF]"
     >
       <p className="text-[40px] lg:text-[72px] font-[500px] lg:font-[600] text-[#101928] lg:pt-[10%]">
         The Product
@@ -17,7 +17,7 @@ export default function Product() {
         Monitor your Lightning node with confidence.
       </p>
 
-      <div className="mt-[40px] flex flex-col gap-[30px] lg:grid lg:grid-cols-2 lg:px-[5%]">
+      <div className="mt-[40px] flex flex-col gap-[30px] lg:gap-[50px] lg:grid lg:grid-cols-2 lg:px-[5%]">
         <div className="border-[1px] border-[#D4D4D4] rounded-[12px] flex flex-col px-[20px] py-[30px]">
           <div>
             <p className="text-[18px] lg:text-[26px] font-[500] lg:font-[600]">
