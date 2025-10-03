@@ -34,7 +34,6 @@ export default function Hero() {
             <span className="text-[#ff9d2b]">gaze</span>
           </h1>
 
-
           <div className="flex flex-col justify-center w-full lg:mt-[50px] lg:mx-auto">
             <p className="mb-6 text-[13.5px] lg:text-[21px] font-[400] text-[#3D3D3D] text-center lg:max-w-[85%] lg:mx-auto lg:tracking-[0.01em]">
               A powerful open-source observability tool for Lightning nodes.
@@ -48,22 +47,27 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="inline-flex h-12 lg:h-[64px] items-center justify-center gap-2 rounded-full bg-[#2151f5] px-6 lg:px-4 text-white active:translate-y-[2px] active:shadow-[0_4px_0_#1737a5] w-[200px] lg:w-[220px] lg:mt-[30px] self-center"
             >
-              <Image src={github} alt="github" className="lg:w-[25px]"/>
-              <span className="text-[15px] lg:text-[23px] font-semibold">Check Github</span>
+              <Image src={github} alt="github" className="lg:w-[25px]" />
+              <span className="text-[15px] lg:text-[23px] font-semibold">
+                Check Github
+              </span>
             </Link>
           </div>
         </div>
       </div>
       <div className="mt-[120px] lg:mt-[-425px] lg:absolute lg:w-[80%] lg:flex lg:justify-center lg:items-center lg:mx-[10%]">
-        <Image src={dashboard} alt="dashboard overview" className="w-full lg:w-full"/>
+        <Image
+          src={dashboard}
+          alt="dashboard overview"
+          className="w-full lg:w-full"
+        />
       </div>
-      
-    
 
-      <Image src={gradient} alt="gradient" className="hidden lg:block absolute md:bottom-[-520px] lg:w-full"/>
-
-
-
+      <Image
+        src={gradient}
+        alt="gradient"
+        className="hidden lg:block absolute md:bottom-[-570px] lg:w-full lg:mb-[50px]"
+      />
     </section>
   );
 }
