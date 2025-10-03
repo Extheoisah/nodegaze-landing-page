@@ -63,11 +63,13 @@ export default function Hero() {
         />
       </div>
 
+    <div className="hidden lg:block relative w-screen">
       <Image
         src={gradient}
         alt="gradient"
-        className="hidden lg:block absolute md:bottom-[-570px] lg:w-full"
+        className="hidden lg:block absolute lg:w-full 2xl:top-[150px]"
       />
+      </div>
     </section>
   );
 }
