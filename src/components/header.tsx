@@ -66,7 +66,7 @@ export default function Hero() {
       <Image
         src={gradient}
         alt="gradient"
-        className="hidden lg:block absolute md:bottom-[-570px] lg:w-full lg:mb-[50px]"
+        className="hidden lg:block absolute md:bottom-[-570px] lg:w-full"
       />
     </section>
   );
