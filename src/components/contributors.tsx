@@ -46,8 +46,8 @@ const CONTRIBUTORS: Contributor[] = [
     name: "Afolabi Oluwatobiloba",
     role: "Contributor",
     avatar: tobi,
-    xlink: "https://github.com/tobi-afolabi",
-    githublink: "https://github.com/tobi-afolabi",
+    xlink: "https://x.com/Adeoye_G",
+    githublink: "https://www.figma.com/proto/2D6XWjeORbREu4bczeFKO0/Bitcoin-Portfolio?page-id=0%3A1&node-id=87-2809&p=f&viewport=103%2C63%2C0.08&t=VOR4glf8rx3BTGhs-8&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=87%3A2809&hide-ui=1",
   },
   {
     name: "Umolo Blessing",
@@ -60,8 +60,8 @@ const CONTRIBUTORS: Contributor[] = [
     name: "Busayo Dada",
     role: "Contributor",
     avatar: busayo,
-    xlink: "https://github.com/busayodada",
-    githublink: "https://github.com/busayodada",
+    xlink: "https://x.com/BusayoDada_",
+    githublink: "https://github.com/busayo-OD",
   },
   {
     name: "Chuks Agbakuru",
@@ -76,7 +76,7 @@ export default function Contributors() {
   return (
     <section
       id="contributors"
-      className="relative mt-[60px] px-[20px] py-[40px] overflow-hidden scroll-mt-[120px] lg:mt-[5%] lg:px-[5%] lg:w-screen"
+      className="relative mt-[60px] px-[20px] py-[40px] overflow-hidden scroll-mt-[120px] lg:mt-[5%]"
     >
       <div className="pointer-events-none select-none absolute left-1/2 top-0 -translate-x-1/2 w-full">
         <Image
@@ -85,10 +85,10 @@ export default function Contributors() {
           className="w-full h-full lg:hidden"
           priority
         />
-        <Image src={dsbg} alt="background" priority className="lg:w-full" />
+        <Image src={dsbg} alt="background" priority className="lg:w-full h-full" />
       </div>
 
-      <div className="relative">
+      <div className="relative lg:mx-auto lg:max-w-[1440px] lg:px-[40px]">
         <p className="text-[40px] font-[500] text-[#101928] lg:text-[72px] lg:font-[600]">
           Contributors
         </p>

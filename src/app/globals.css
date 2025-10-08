@@ -1,5 +1,25 @@
+@import url("https://api.fontshare.com/v2/css?f[]=clash-grotesk@200,300,400,500,600,700&display=swap");
 @import "tailwindcss";
+
+@layer base {
+  * {
+    @apply font-sans;
+  }
+}
 
 html {
   scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Clash Grotesk";
+  src: url("/fonts/ClashGrotesk-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Force this font globally */
+* {
+  font-family: "Clash Grotesk", sans-serif !important;
 }

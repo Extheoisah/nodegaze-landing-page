@@ -54,7 +54,6 @@ export default function Navbar() {
       if (el) observer.observe(el);
     });
 
-    // Initialize from hash (if user visits with #product for example)
     const hashId = window.location.hash.replace("#", "") || "home";
     const initialEl = document.getElementById(hashId);
     if (initialEl) setActiveSection(initialEl.id);
@@ -64,13 +63,12 @@ export default function Navbar() {
     };
   }, []);
 
-  // helper: get id from href (#home -> home)
   const idFromHref = (href: string) => href.replace("#", "");
 
   return (
     <>
-      <header className="fixed top-[50px] z-40 bg-white/20 backdrop-blur supports-[backdrop-filter]:bg-white/20 w-full px-[20px] lg:px-[40px]">
-        <div className="rounded-[50px] border border-[#b0b4b8] lg:h-[80px] lg:flex lg:items-center lg:justify-between lg:w-full">
+      <header className="fixed top-[50px] z-40 bg-white/20 backdrop-blur supports-[backdrop-filter]:bg-white/20 w-full px-[20px] lg:px-[40px] lg:w-[1440px] lg:mx-auto left-0 right-0">
+        <div className="rounded-[50px] border border-[#b0b4b8] lg:h-[80px] lg:flex lg:items-center lg:justify-between lg:w-full mx-auto w-full max-w-[1440px]">
           <div className="mx-auto lg:hidden flex h-16 w-full max-w-screen-sm items-center justify-between px-4">
             <a
               href="#home"
@@ -134,7 +132,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="fixed inset-0 z-50 bg-black/60">
+        <div className="fixed inset-0 z-50 bg-black/60 h-[50vh]">
           <div className="absolute inset-0 bg-white">
             <div className="mx-auto flex h-16 w-full max-w-screen-sm items-center justify-end px-4">
               <Image

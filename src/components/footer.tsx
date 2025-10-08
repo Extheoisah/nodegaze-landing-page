@@ -19,10 +19,10 @@ export default function Footer() {
         </nav>
 
         <div className="mt-[28px] lg:mt-[50px] flex items-center gap-[10px] lg:gap-[30px]">
-          <Link aria-label="GitHub" href="#" className="inline-flex items-center justify-center rounded-[8px]">
+          <Link aria-label="GitHub" href="https://github.com/extheoisah/nodegaze" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-[8px]">
             <Image src={github} alt="GitHub" width={28} height={28} className="lg:w-[50px]" />
           </Link>
-          <Link aria-label="X" href="#" className="inline-flex items-center justify-center rounded-[8px]">
+          <Link aria-label="X" href="#" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-[8px]">
             <Image src={xlogo} alt="X" width={28} height={28}  className="lg:w-[50px]"/>
           </Link>
         </div>

@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Clash Grotesk"', "sans-serif"],
+        clash: ["Clash Grotesk", "sans-serif"],
       },
     },
   },
